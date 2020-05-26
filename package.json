@@ -1,6 +1,17 @@
 {
   "devDependencies": {
     "gts": "^2.0.2",
-    "yarn-upgrade-all": "^0.5.2"
+    "yarn-upgrade-all": "^0.5.2",
+    "typescript": "^3.8.3",
+    "@types/node": "^13.11.1"
+  },
+  "scripts": {
+    "check": "gts check",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "yarn run compile",
+    "pretest": "yarn run compile",
+    "posttest": "yarn run check"
   }
 }
