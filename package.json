@@ -1,22 +1,21 @@
 {
   "license": "MIT",
   "scripts": {
-    "test": "jest -w 1 --detectOpenHandles",
-    "check": "gts check",
-    "clean": "gts clean",
-    "compile": "tsc",
-    "fix": "gts fix",
-    "prepare": "yarn run compile",
-    "pretest": "yarn run compile",
-    "posttest": "yarn run check"
+    "test": "jest -w 1 --detectOpenHandles"
   },
   "devDependencies": {
     "@types/jest": "^25.2.3",
-    "@types/node": "^13.11.1",
+    "@types/node": "^14.0.5",
     "gts": "^2.0.2",
+    "husky": "^4.2.5",
     "jest": "^26.0.1",
     "ts-jest": "^26.0.0",
-    "typescript": "^3.8.3",
+    "typescript": "^3.9.3",
     "yarn-upgrade-all": "^0.5.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "gts fix && yarn test"
+    }
   }
 }

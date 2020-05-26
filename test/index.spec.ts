@@ -5,6 +5,6 @@ jest.setTimeout(64000);
 
 describe('default', () => {
   test('default', async () => {
-    console.log(LPC.hair());
+    expect(LPC.hair()).toBeDefined();
   });
 });
