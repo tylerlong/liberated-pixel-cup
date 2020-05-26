@@ -5,6 +5,11 @@ jest.setTimeout(64000);
 
 describe('default', () => {
   test('default', async () => {
-    expect(LPC.hair()).toBeDefined();
+    expect(LPC.hair().male().long().blue().path()).toEqual([
+      'hair',
+      'male',
+      'long',
+      'blue',
+    ]);
   });
 });

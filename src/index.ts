@@ -2,7 +2,7 @@ import Hair from './Hair';
 
 class LPC {
   static hair() {
-    return new Hair();
+    return new Hair([]);
   }
 }
 

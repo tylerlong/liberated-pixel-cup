@@ -1,7 +1,7 @@
 {
   "license": "MIT",
   "scripts": {
-    "test": "jest -w 1 --detectOpenHandles"
+    "test": "tsc && jest -w 1 --detectOpenHandles"
   },
   "devDependencies": {
     "@types/jest": "^25.2.3",
@@ -15,7 +15,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "gts fix && yarn test"
+      "pre-push": "yarn test && gts fix"
     }
   }
 }
