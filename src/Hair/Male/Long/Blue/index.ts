@@ -1,4 +1,4 @@
-import BaseClass from './BaseClass';
+import BaseClass from '../../../../BaseClass';
 
 class Blue extends BaseClass {}
 

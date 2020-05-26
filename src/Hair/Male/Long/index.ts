@@ -1,5 +1,5 @@
 import Blue from './Blue';
-import BaseClass from './BaseClass';
+import BaseClass from '../../../BaseClass';
 
 class Long extends BaseClass {
   blue() {

@@ -1,5 +1,5 @@
 import Male from './Male';
-import BaseClass from './BaseClass';
+import BaseClass from '../BaseClass';
 
 class Hair extends BaseClass {
   male() {
