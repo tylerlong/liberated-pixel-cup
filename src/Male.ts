@@ -1,16 +1,7 @@
 import Long from './Long';
+import BaseClass from './BaseClass';
 
-class Male {
-  basePath: string[];
-
-  constructor(basePath: string[]) {
-    this.basePath = basePath;
-  }
-
-  path() {
-    return [...this.basePath, 'male'];
-  }
-
+class Male extends BaseClass {
   long() {
     return new Long(this.path());
   }

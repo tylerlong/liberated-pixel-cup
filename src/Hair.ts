@@ -1,16 +1,7 @@
 import Male from './Male';
+import BaseClass from './BaseClass';
 
-class Hair {
-  basePath: string[];
-
-  constructor(basePath: string[]) {
-    this.basePath = basePath;
-  }
-
-  path() {
-    return [...this.basePath, 'hair'];
-  }
-
+class Hair extends BaseClass {
   male() {
     return new Male(this.path());
   }

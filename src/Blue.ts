@@ -1,13 +1,5 @@
-class Blue {
-  basePath: string[];
+import BaseClass from './BaseClass';
 
-  constructor(basePath: string[]) {
-    this.basePath = basePath;
-  }
-
-  path() {
-    return [...this.basePath, 'blue'];
-  }
-}
+class Blue extends BaseClass {}
 
 export default Blue;

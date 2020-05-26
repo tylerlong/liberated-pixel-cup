@@ -1,16 +1,7 @@
 import Blue from './Blue';
+import BaseClass from './BaseClass';
 
-class Long {
-  basePath: string[];
-
-  constructor(basePath: string[]) {
-    this.basePath = basePath;
-  }
-
-  path() {
-    return [...this.basePath, 'long'];
-  }
-
+class Long extends BaseClass {
   blue() {
     return new Blue(this.path());
   }
