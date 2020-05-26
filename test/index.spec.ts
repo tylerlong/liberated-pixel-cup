@@ -11,5 +11,7 @@ describe('default', () => {
       'long',
       'blue',
     ]);
+
+    expect(LPC.body().male().dark().path()).toEqual(['body', 'male', 'dark']);
   });
 });
