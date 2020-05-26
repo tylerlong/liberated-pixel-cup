@@ -3,9 +3,14 @@
   "scripts": {
     "test": "tsc && jest -w 1 --detectOpenHandles"
   },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "sharp": "^0.25.3"
+  },
   "devDependencies": {
     "@types/jest": "^25.2.3",
     "@types/node": "^14.0.5",
+    "@types/sharp": "^0.25.0",
     "gts": "^2.0.2",
     "husky": "^4.2.5",
     "jest": "^26.0.1",
