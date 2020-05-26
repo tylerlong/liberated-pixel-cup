@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "gts": "^2.0.2",
+    "yarn-upgrade-all": "^0.5.2"
+  }
+}
