@@ -1,11 +1,7 @@
 {
-  "devDependencies": {
-    "gts": "^2.0.2",
-    "yarn-upgrade-all": "^0.5.2",
-    "typescript": "^3.8.3",
-    "@types/node": "^13.11.1"
-  },
+  "license": "MIT",
   "scripts": {
+    "test": "jest -w 1 --detectOpenHandles",
     "check": "gts check",
     "clean": "gts clean",
     "compile": "tsc",
@@ -13,5 +9,14 @@
     "prepare": "yarn run compile",
     "pretest": "yarn run compile",
     "posttest": "yarn run check"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "@types/node": "^13.11.1",
+    "gts": "^2.0.2",
+    "jest": "^26.0.1",
+    "ts-jest": "^26.0.0",
+    "typescript": "^3.8.3",
+    "yarn-upgrade-all": "^0.5.2"
   }
 }
