@@ -1,5 +1,3 @@
-import sharp from 'sharp';
-
 import Hair from './generated/Hair';
 import Body from './generated/Body';
 import File from './File';
@@ -19,14 +17,8 @@ class LPC {
     return new Hair(this, []);
   }
 
-  async composite(file: File, ...files: File[]): Promise<Buffer> {
-    if (files.length === 0) {
-      return file.read();
-    }
-
-    return await sharp(file.read())
-      .composite(files.map(f => ({input: f.read()})))
-      .toBuffer();
+  async overlay(file: File, ...files: File[]): Promise<Buffer> {
+    return file.overlay(...files);
   }
 }
 

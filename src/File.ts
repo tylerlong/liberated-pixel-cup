@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import sharp from 'sharp';
 
 import Folder from './Folder';
 
@@ -8,6 +9,12 @@ class File extends Folder {
     return fs.readFileSync(
       path.join(this.lpc.spritesFolder, ...this.path()) + '.png'
     );
+  }
+
+  async overlay(...files: File[]): Promise<Buffer> {
+    return await sharp(this.read())
+      .composite(files.map(f => ({input: f.read()})))
+      .toBuffer();
   }
 }
 
