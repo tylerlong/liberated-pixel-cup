@@ -1,9 +1,12 @@
 {
   "name": "liberated-pixel-cup",
-  "version": "0.1.0",
+  "version": "0.2.0",
+  "description": "This repository provides art assets from Liberated Pixel Cup",
   "license": "MIT",
   "main": "build/index.js",
   "types": "build/index.d.ts",
+  "repository": "git@github.com:tylerlong/liberated-pixel-cup.git",
+  "author": "Tyler Liu <tyler4long@gmail.com>",
   "scripts": {
     "test": "jest -w 1 --detectOpenHandles",
     "generate": "ts-node -r dotenv-override-true/config code-generator/index.ts && gts fix",
