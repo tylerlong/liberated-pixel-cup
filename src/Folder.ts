@@ -1,18 +1,16 @@
-import LPC from '.';
-
 class Folder {
-  lpc: LPC;
-  basePath: string[];
+  rootPath: string;
+  parentPath: string[];
 
-  constructor(lpc: LPC, basePath: string[]) {
-    this.lpc = lpc;
-    this.basePath = basePath;
+  constructor(rootPath: string, parentPath: string[]) {
+    this.rootPath = rootPath;
+    this.parentPath = parentPath;
   }
 
   get path() {
     const className = this.constructor.name;
     return [
-      ...this.basePath,
+      ...this.parentPath,
       className[0].toLowerCase() + className.substring(1),
     ];
   }

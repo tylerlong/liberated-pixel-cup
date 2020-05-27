@@ -2,6 +2,8 @@
   "name": "liberated-pixel-cup",
   "version": "0.1.0",
   "license": "MIT",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "scripts": {
     "test": "tsc && jest -w 1 --detectOpenHandles",
     "generate": "ts-node -r dotenv-override-true/config code-generator/index.ts && gts fix"

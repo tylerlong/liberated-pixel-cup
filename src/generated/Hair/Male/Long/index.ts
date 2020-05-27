@@ -3,7 +3,7 @@ import Folder from '../../../../Folder';
 
 class Long extends Folder {
   blue() {
-    return new Blue(this.lpc, this.path);
+    return new Blue(this.rootPath, this.path);
   }
 }
 

@@ -1,22 +1,8 @@
-import Hair from './generated/Hair';
-import Body from './generated/Body';
 import File from './File';
+import Root from './generated/Root';
+export {default as Animations} from './Animations';
 
-class LPC {
-  spritesFolder: string;
-
-  constructor(spritesFolder: string) {
-    this.spritesFolder = spritesFolder;
-  }
-
-  body() {
-    return new Body(this, []);
-  }
-
-  hair() {
-    return new Hair(this, []);
-  }
-
+class LPC extends Root {
   async overlay(file: File, ...files: File[]): Promise<Buffer> {
     return file.overlay(...files);
   }

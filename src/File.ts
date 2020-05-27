@@ -7,7 +7,7 @@ import mappings from './generated/mappings';
 
 class File extends Folder {
   read(): Buffer {
-    return fs.readFileSync(path.join(this.lpc.spritesFolder, this.filePath));
+    return fs.readFileSync(path.join(this.rootPath, this.filePath));
   }
 
   get filePath(): string {
