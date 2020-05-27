@@ -208,14 +208,32 @@ export class Animations {
     if (!fs.existsSync(folderPath)) {
       fs.mkdirSync(folderPath);
     }
-    for (const action of ['spellcut', 'thrust', 'walk', 'slash', 'shoot']) {
-      for (const direction of ['n', 'w', 's', 'e']) {
-        fs.writeFileSync(
-          path.join(folderPath, `${action}-${direction}.png`),
-          (this as any)[action][direction]
-        );
-      }
-    }
+
+    fs.writeFileSync(path.join(folderPath, 'spellcut-n.png'), this.spellcut.n);
+    fs.writeFileSync(path.join(folderPath, 'spellcut-w.png'), this.spellcut.w);
+    fs.writeFileSync(path.join(folderPath, 'spellcut-s.png'), this.spellcut.s);
+    fs.writeFileSync(path.join(folderPath, 'spellcut-e.png'), this.spellcut.e);
+
+    fs.writeFileSync(path.join(folderPath, 'thrust-n.png'), this.thrust.n);
+    fs.writeFileSync(path.join(folderPath, 'thrust-w.png'), this.thrust.w);
+    fs.writeFileSync(path.join(folderPath, 'thrust-s.png'), this.thrust.s);
+    fs.writeFileSync(path.join(folderPath, 'thrust-e.png'), this.thrust.e);
+
+    fs.writeFileSync(path.join(folderPath, 'walk-n.png'), this.walk.n);
+    fs.writeFileSync(path.join(folderPath, 'walk-w.png'), this.walk.w);
+    fs.writeFileSync(path.join(folderPath, 'walk-s.png'), this.walk.s);
+    fs.writeFileSync(path.join(folderPath, 'walk-e.png'), this.walk.e);
+
+    fs.writeFileSync(path.join(folderPath, 'slash-n.png'), this.slash.n);
+    fs.writeFileSync(path.join(folderPath, 'slash-w.png'), this.slash.w);
+    fs.writeFileSync(path.join(folderPath, 'slash-s.png'), this.slash.s);
+    fs.writeFileSync(path.join(folderPath, 'slash-e.png'), this.slash.e);
+
+    fs.writeFileSync(path.join(folderPath, 'shoot-n.png'), this.shoot.n);
+    fs.writeFileSync(path.join(folderPath, 'shoot-w.png'), this.shoot.w);
+    fs.writeFileSync(path.join(folderPath, 'shoot-s.png'), this.shoot.s);
+    fs.writeFileSync(path.join(folderPath, 'shoot-e.png'), this.shoot.e);
+
     fs.writeFileSync(path.join(folderPath, 'hurt.png'), this.hurt);
   }
 }
