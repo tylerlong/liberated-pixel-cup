@@ -3,12 +3,15 @@ import path from 'path';
 import sharp from 'sharp';
 
 import Folder from './Folder';
+import mappings from './generated/mappings';
 
 class File extends Folder {
   read(): Buffer {
-    return fs.readFileSync(
-      path.join(this.lpc.spritesFolder, ...this.path) + '.png'
-    );
+    return fs.readFileSync(path.join(this.lpc.spritesFolder, this.filePath));
+  }
+
+  get filePath(): string {
+    return mappings[this.path.join('/')];
   }
 
   async overlay(...files: File[]): Promise<Buffer> {
