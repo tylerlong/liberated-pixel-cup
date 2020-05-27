@@ -12,3 +12,5 @@ Do NOT ask me for permissions to use those art assets because I don't own them.
 
 - Remove hard-coded strings
     - https://github.com/tylerlong/Universal-LPC-spritesheet
+- https://github.com/sanderfrenken/Universal-LPC-Spritesheet-Character-Generator
+    - https://sanderfrenken.github.io/Universal-LPC-Spritesheet-Character-Generator/#
