@@ -1,7 +1,7 @@
 {
   "name": "liberated-pixel-cup",
-  "version": "0.2.0",
-  "description": "This repository provides art assets from Liberated Pixel Cup",
+  "version": "0.2.2",
+  "description": "This repository provides a programmatical way to generate characters from Liberated Pixel Cup",
   "license": "MIT",
   "main": "build/index.js",
   "types": "build/index.d.ts",
