@@ -1,7 +1,7 @@
 import sharp from 'sharp';
 
-import Hair from './Hair';
-import Body from './Body';
+import Hair from './generated/Hair';
+import Body from './generated/Body';
 import File from './File';
 
 class LPC {

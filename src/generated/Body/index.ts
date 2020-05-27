@@ -1,4 +1,4 @@
-import Folder from '../Folder';
+import Folder from '../../Folder';
 import Male from './Male';
 
 class Body extends Folder {

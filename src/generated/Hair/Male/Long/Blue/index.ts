@@ -1,4 +1,4 @@
-import File from '../../../../File';
+import File from '../../../../../File';
 
 class Blue extends File {}
 

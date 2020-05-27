@@ -1,5 +1,5 @@
 import Blue from './Blue';
-import Folder from '../../../Folder';
+import Folder from '../../../../Folder';
 
 class Long extends Folder {
   blue() {

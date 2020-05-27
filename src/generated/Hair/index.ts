@@ -1,5 +1,5 @@
 import Male from './Male';
-import Folder from '../Folder';
+import Folder from '../../Folder';
 
 class Hair extends Folder {
   male() {

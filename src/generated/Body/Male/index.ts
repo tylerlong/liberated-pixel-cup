@@ -1,5 +1,5 @@
 import Dark from './Dark';
-import Folder from '../../Folder';
+import Folder from '../../../Folder';
 
 class Male extends Folder {
   dark() {
