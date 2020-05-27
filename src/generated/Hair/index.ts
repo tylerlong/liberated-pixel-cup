@@ -3,7 +3,7 @@ import Folder from '../../Folder';
 
 class Hair extends Folder {
   male() {
-    return new Male(this.lpc, this.path());
+    return new Male(this.lpc, this.path);
   }
 }
 

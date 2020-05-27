@@ -3,7 +3,7 @@ import Folder from '../../../Folder';
 
 class Male extends Folder {
   long() {
-    return new Long(this.lpc, this.path());
+    return new Long(this.lpc, this.path);
   }
 }
 

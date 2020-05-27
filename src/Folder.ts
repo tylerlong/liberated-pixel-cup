@@ -9,7 +9,7 @@ class Folder {
     this.basePath = basePath;
   }
 
-  path() {
+  get path() {
     const className = this.constructor.name;
     return [
       ...this.basePath,
