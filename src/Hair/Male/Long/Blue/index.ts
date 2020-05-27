@@ -1,5 +1,5 @@
-import BaseClass from '../../../../BaseClass';
+import File from '../../../../File';
 
-class Blue extends BaseClass {}
+class Blue extends File {}
 
 export default Blue;

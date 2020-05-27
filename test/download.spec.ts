@@ -7,8 +7,8 @@ import LPC from '../src/index';
 
 jest.setTimeout(64000);
 
-describe('default', () => {
-  test('download', async () => {
+describe('download', () => {
+  test('default', async () => {
     const r1 = await axios.get(
       `https://github.com/tylerlong/Universal-LPC-spritesheet/raw/master/${LPC.body()
         .male()

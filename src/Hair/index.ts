@@ -1,7 +1,7 @@
 import Male from './Male';
-import BaseClass from '../BaseClass';
+import Folder from '../Folder';
 
-class Hair extends BaseClass {
+class Hair extends Folder {
   male() {
     return new Male(this.path());
   }

@@ -5,8 +5,8 @@ import fs from 'fs';
 
 jest.setTimeout(64000);
 
-describe('default', () => {
-  test('overlay', async () => {
+describe('overlay', () => {
+  test('default', async () => {
     const bodyPath = path.join(__dirname, '..', 'downloads', 'body.png');
     const hairPath = path.join(__dirname, '..', 'downloads', 'hair.png');
     const resultPath = path.join(__dirname, '..', 'downloads', 'result.png');

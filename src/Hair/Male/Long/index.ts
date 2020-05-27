@@ -1,7 +1,7 @@
 import Blue from './Blue';
-import BaseClass from '../../../BaseClass';
+import Folder from '../../../Folder';
 
-class Long extends BaseClass {
+class Long extends Folder {
   blue() {
     return new Blue(this.path());
   }

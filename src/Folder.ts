@@ -1,4 +1,4 @@
-class BaseClass {
+class Folder {
   basePath: string[];
 
   constructor(basePath: string[]) {
@@ -14,4 +14,4 @@ class BaseClass {
   }
 }
 
-export default BaseClass;
+export default Folder;
