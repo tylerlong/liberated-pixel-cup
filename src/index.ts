@@ -5,23 +5,27 @@ import Body from './generated/Body';
 import File from './File';
 
 class LPC {
-  static body() {
-    return new Body([]);
+  spritesFolder: string;
+
+  constructor(spritesFolder: string) {
+    this.spritesFolder = spritesFolder;
   }
 
-  static hair() {
-    return new Hair([]);
+  body() {
+    return new Body(this, []);
   }
 
-  static async composite(file: File, ...files: File[]): Promise<Buffer> {
+  hair() {
+    return new Hair(this, []);
+  }
+
+  async composite(file: File, ...files: File[]): Promise<Buffer> {
     if (files.length === 0) {
-      return await file.download();
+      return file.read();
     }
 
-    return sharp(await file.download())
-      .composite(
-        await Promise.all(files.map(async f => ({input: await f.download()})))
-      )
+    return await sharp(file.read())
+      .composite(files.map(f => ({input: f.read()})))
       .toBuffer();
   }
 }

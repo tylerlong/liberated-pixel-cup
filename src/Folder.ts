@@ -1,7 +1,11 @@
+import LPC from '.';
+
 class Folder {
+  lpc: LPC;
   basePath: string[];
 
-  constructor(basePath: string[]) {
+  constructor(lpc: LPC, basePath: string[]) {
+    this.lpc = lpc;
     this.basePath = basePath;
   }
 

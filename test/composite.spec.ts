@@ -7,7 +7,9 @@ jest.setTimeout(64000);
 
 describe('composite', () => {
   test('default', async () => {
-    const buffer1 = await LPC.composite(LPC.body().male().dark());
+    const lpc = new LPC(process.env.SPRITES_FOLDER!);
+
+    const buffer1 = await lpc.composite(lpc.body().male().dark());
     expect(buffer1).toBeDefined();
     expect(buffer1.length).toBeGreaterThan(0);
     fs.writeFileSync(
@@ -15,9 +17,9 @@ describe('composite', () => {
       buffer1
     );
 
-    const buffer2 = await LPC.composite(
-      LPC.body().male().dark(),
-      LPC.hair().male().long().blue()
+    const buffer2 = await lpc.composite(
+      lpc.body().male().dark(),
+      lpc.hair().male().long().blue()
     );
     expect(buffer2).toBeDefined();
     expect(buffer2.length).toBeGreaterThan(0);

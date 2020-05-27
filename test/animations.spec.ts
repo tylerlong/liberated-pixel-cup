@@ -7,9 +7,11 @@ jest.setTimeout(64000);
 
 describe('animations', () => {
   test('default', async () => {
-    const buffer = await LPC.composite(
-      LPC.body().male().dark(),
-      LPC.hair().male().long().blue()
+    const lpc = new LPC(process.env.SPRITES_FOLDER!);
+
+    const buffer = await lpc.composite(
+      lpc.body().male().dark(),
+      lpc.hair().male().long().blue()
     );
     const animations = await Animations.fromBuffer(buffer);
     animations.saveToFile(path.join(__dirname, '..', 'downloads', 'redhead'));

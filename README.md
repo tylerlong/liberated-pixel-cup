@@ -7,7 +7,6 @@ All the credits go to the [original authors](https://github.com/jrconway3/Univer
 Do NOT ask me for permissions to use those art assets because I don't own them.
 
 
-
 ## Todo
 
 - Remove hard-coded strings

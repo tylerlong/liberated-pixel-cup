@@ -1,16 +1,13 @@
-import axios from 'axios';
+import fs from 'fs';
+import path from 'path';
 
 import Folder from './Folder';
 
 class File extends Folder {
-  async download(): Promise<Buffer> {
-    const r = await axios.get(
-      `https://github.com/tylerlong/Universal-LPC-spritesheet/raw/master/${this.path().join(
-        '/'
-      )}.png`,
-      {responseType: 'arraybuffer'}
+  read(): Buffer {
+    return fs.readFileSync(
+      path.join(this.lpc.spritesFolder, ...this.path()) + '.png'
     );
-    return r.data;
   }
 }
 
