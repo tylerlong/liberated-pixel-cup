@@ -5,11 +5,17 @@ jest.setTimeout(64000);
 
 describe('path', () => {
   test('default', async () => {
-    const lpc = new LPC(process.env.SPRITES_FOLDER!);
+    const lpc = new LPC(process.env.LPC_SPRITES_FOLDER!);
 
-    expect(lpc.body().male().dark().path).toEqual(['body', 'male', 'dark']);
+    expect(lpc.body().male().dark().path).toEqual([
+      'lpc',
+      'body',
+      'male',
+      'dark',
+    ]);
 
     expect(lpc.hair().male().long().blue().path).toEqual([
+      'lpc',
       'hair',
       'male',
       'long',

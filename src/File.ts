@@ -11,7 +11,7 @@ class File extends Folder {
   }
 
   get filePath(): string {
-    return mappings[this.path.join('/')];
+    return mappings[this.path.slice(1).join('/')];
   }
 
   async overlay(...files: File[]): Promise<Buffer> {

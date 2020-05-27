@@ -8,7 +8,7 @@ jest.setTimeout(64000);
 
 describe('animations', () => {
   test('default', async () => {
-    const lpc = new LPC(process.env.SPRITES_FOLDER!);
+    const lpc = new LPC(process.env.LPC_SPRITES_FOLDER!);
 
     const buffer = await lpc
       .body()

@@ -8,11 +8,11 @@ class Folder {
   }
 
   get path() {
-    const className = this.constructor.name;
-    return [
-      ...this.parentPath,
-      className[0].toLowerCase() + className.substring(1),
-    ];
+    let className = this.constructor.name;
+    if (/^A\d+$/.test(className)) {
+      className = className.substring(1);
+    }
+    return [...this.parentPath, className.toLowerCase()];
   }
 }
 
