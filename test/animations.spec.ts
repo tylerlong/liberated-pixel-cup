@@ -1,7 +1,8 @@
 /* eslint-env jest */
+import path from 'path';
+
 import LPC from '../src/index';
 import Animations from '../src/Animations';
-import path from 'path';
 
 jest.setTimeout(64000);
 

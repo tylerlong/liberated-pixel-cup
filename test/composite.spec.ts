@@ -1,7 +1,8 @@
 /* eslint-env jest */
-import LPC from '../src/index';
 import fs from 'fs';
 import path from 'path';
+
+import LPC from '../src/index';
 
 jest.setTimeout(64000);
 
