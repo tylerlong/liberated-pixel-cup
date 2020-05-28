@@ -49,3 +49,12 @@ You can save individual files as well:
 ```ts
 fs.writeFileSync('walk-south.png', animations.walk.s);
 ```
+
+
+## Workflow
+
+You still need to go to the [online generator](https://sanderfrenken.github.io/Universal-LPC-Spritesheet-Character-Generator/) to create and preview the character you want.
+
+Once you choose the character, you can write it down in code, and generate the assets.
+
+This way, you can manage your assets by code instead of manually download and save it from the online generator.
