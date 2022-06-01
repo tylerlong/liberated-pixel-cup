@@ -13,7 +13,7 @@
     "prepublishOnly": "rm -rf build && tsc && gts fix && yarn test && mv build/src/* build/ && rmdir build/src"
   },
   "dependencies": {
-    "sharp": "^0.25.3"
+    "sharp": "^0.30.5"
   },
   "devDependencies": {
     "@types/glob": "^7.1.1",
